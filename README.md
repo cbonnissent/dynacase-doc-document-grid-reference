@@ -1,4 +1,5 @@
-dynacase-doc-document-grid-ref
-==============================
+# Dynacase Document Grid reference manual
 
-Dynacase document grid widget reference manual
+_Code :_
+
+* [Document Grid UI](https://github.com/Anakeen/dynacase-document-grid-UI)
