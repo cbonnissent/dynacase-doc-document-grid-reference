@@ -1,5 +1,7 @@
 book:
-    title: "Document Grid 1.0 Reference Manual"
+    title: "Reference Manual"
+    module: "Document Grid"
+    version: "1.0"
     edition: "1"
     chapters: 
         - number:   "1"
