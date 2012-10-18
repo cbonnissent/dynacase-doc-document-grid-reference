@@ -1,6 +1,7 @@
 book:
     title: "Guide d'intégration"
     module: "Document Grid"
+    githubsrc: "https://github.com/Anakeen/dynacase-doc-document-grid-reference"
     version: "1.0"
     edition: "1"
     chapters: 
