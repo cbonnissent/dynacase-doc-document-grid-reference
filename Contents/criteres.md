@@ -27,8 +27,8 @@ value
     *   tableau javascript : chaque item est soit un id, soit une clef pour les attributs de type enum, docid multiples, 
     *   chaîne de caractère : pour tous les autres types d'attributs et d'opérateurs qui ne sont pas mentionnés ci-dessus
 
-opérateur
-:   <span class="fixme">valider le nom</span>l'opérateur est une chaîne de caractères décrivant le type de recherche qui sera appliqué, la liste est la suivante :
+operator
+:   l'opérateur est une chaîne de caractères décrivant le type de recherche qui sera appliqué, la liste est la suivante :
     
     dc:na
     :   applicable à tous les types d'attributs/propriété indique que le critère ne sera pas pris en compte,
