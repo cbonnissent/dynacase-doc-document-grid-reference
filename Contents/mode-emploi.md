@@ -97,7 +97,7 @@ offlineColumnsDef 
 :   active ou désactive la recherche de la définition des colonnes sur le serveur.
     Passer ca paramètre à false évite une requête au serveur lors de l'initialisation du widget, mais vous devez alors fournir la définition complète.  
     *type* :booléen,  
-    *valeur par défaut* : `true` ;
+    *valeur par défaut* : `false` ;
 
 autoload
 :   active ou désactive le chargement de la table lors de l'initialisation.
