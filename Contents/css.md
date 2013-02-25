@@ -1,4 +1,4 @@
-# Syle (CSS)
+# Syle (CSS) {#document-grid-ref:08f82a45-776d-4d92-9a97-69eddc735435}
 
 Le plugin docGrid utilise plusieurs éléments de CSS :
 

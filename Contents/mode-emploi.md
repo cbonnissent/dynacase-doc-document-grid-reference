@@ -1,6 +1,6 @@
-# Mode d'emploi
+# Mode d'emploi {#document-grid-ref:47c10fee-7d50-4a0d-acd9-9fd9e1d1c658}
 
-## Dépendances
+## Dépendances {#document-grid-ref:b77dc4cd-c01b-459e-bb0a-2b0cb397bcf1}
 
 L'intégration du plugin requiert l'ajout dans la page web des composants suivants :
 
@@ -13,11 +13,11 @@ L'intégration du plugin requiert l'ajout dans la page web des composants suivan
 
 Les adresses des éléments sont données à titre indicatif et sont valables dans l'optique d'une intégration au sein d'une application/action.
 
-## Droits
+## Droits {#document-grid-ref:ab08967e-c25e-4fd7-8997-3e6a2f71a20d}
 
 Les utilisateurs devant avoir accès à DocumentGrid et ses actions associées doivent avoir l'ACL : *BASIC* de l'application *DOCUMENT_GRID_UI*.
 
-## Initialisation
+## Initialisation {#document-grid-ref:be129832-025e-4939-9bb2-09c5b4271077}
 
 Idéalement l'initialisation du plugin doit avoir lieu sur l'évènement *ready* de la page en cours pour permettre à la DOM et aux dépendances d'être chargées au préalable.
 
@@ -30,16 +30,16 @@ Exemple d'initialisation de documentGrid contenant le titre et un bouton permett
     <html>
         <head>
             <title>DocumentGrid</title>
-
+            
             <link href="lib/jquery-ui/css/smoothness/jquery-ui.css" rel="stylesheet" type="text/css"/>
             <link href="lib/jquery-dataTables/css/jquery.dataTables_themeroller.css" rel="stylesheet" type="text/css" />
             <link href="DOCUMENT_GRID_UI/Layout/jquery.docGrid.css" rel="stylesheet" type="text/css" />
-
+            
             <script type="text/javascript" src="lib/jquery/jquery.js"></script>
             <script type="text/javascript" src="lib/jquery-ui/js/jquery-ui.js"></script>
             <script type="text/javascript" src="lib/jquery-dataTables/js/jquery.dataTables.min.js"></script>
             <script type="text/javascript" src="DOCUMENT_GRID_UI/Layout/jquery.docGrid-code.js"></script>
-
+            
             <script type="text/javascript">
                 $(document).on("ready", function () {
                     $("#mydocGrid").docGrid({
@@ -55,14 +55,14 @@ Exemple d'initialisation de documentGrid contenant le titre et un bouton permett
                 });
             </script>
         </head>
-
+        
         <body>
             <table id="mydocGrid"></table>
         </body>
-
+        
     </html>
 
-### Options de configuration
+### Options de configuration {#document-grid-ref:405a40cd-9f17-42c8-b08e-ce79f06c13f0}
 
 Les éléments en gras sont obligatoires.
 
@@ -137,7 +137,7 @@ Pour mettre à jour une option après l'initialisation, on utilise la syntaxe su
 
 *note* : seules les options *collection* et *criterias* peuvent changées une fois la grille initialisée.
 
-#### columnsDef {#columnsDef}
+#### columnsDef {#document-grid-ref:e1408dca-0c10-4c33-bb1c-8aeab1f69ef1}
 
 Cet objet de configuration donne les éléments permettant d'établir la configuration des colonnes de la dataTable.
 Pour ce faire, il possède les propriétés `defaultFam` et `columns`.
@@ -227,14 +227,14 @@ defaultFam
 
 Lors de la définition d'une colonne doivent être présent a minima soit l'id, soit le type.
 
-#### dataTableOptions
+#### dataTableOptions {#document-grid-ref:bba069d3-a65a-4e82-80c5-d58955066087}
 
 Options bas niveau de la dataTable (voir la [page d'aide de dataTable][jquery-datatables-options]).
 
 Il est à noter que si des options de configuration de la dataTable sont ajoutées Anakeen ne garantit le plus le fonctionnement de celle-ci.
 
 
-## Méthodes associées
+## Méthodes associées {#document-grid-ref:d1c034a3-eb0b-4cc4-89b1-7892642b1428}
 
 Plusieurs méthodes sont associées à l'objet documentGrid :
 
@@ -254,7 +254,7 @@ Ces méthodes sont appelées avec la syntaxe suivante :
     [javascript]
     $("#mydocGrid").docGrid("<fonction_name>");
 
-## Événement associés :
+## Événement associés : {#document-grid-ref:3d241ffa-9893-4f07-a0c8-7fe44659013c}
 
 error
 :   déclenché à chaque erreur détectée par la dataTable.  
@@ -281,6 +281,6 @@ Les évènements peuvent être écoutés de deux manières différentes :
     [javascript]
     $("#mydocGrid").docGrid({ error : function(e, ui) { console.log(ui);}};
 
-[criteres]: #criteres
-[columnsDef]: #columnsDef
+[criteres]: #document-grid-ref:57ef9e48-731e-46ff-aa8e-ce5c015a3b42
+[columnsDef]: #document-grid-ref:e1408dca-0c10-4c33-bb1c-8aeab1f69ef1
 [jquery-datatables-options]: http://www.datatables.net/usage/options

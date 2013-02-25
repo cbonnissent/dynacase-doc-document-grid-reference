@@ -1,4 +1,4 @@
-# Backend PHP
+# Backend PHP {#document-grid-ref:b0d334a8-0c00-454e-996c-e701582340ec}
 
 Les parties cliente et serveur communiquent via des requêtes *ajax*, et le contenu est formaté en JSON.
 
@@ -10,18 +10,18 @@ Un des backend les plus simple que l'on peut créer est celui par défaut qui se
 
     [php]
     <?php
-
+    
     require_once 'DOCUMENT_GRID_UI/getdocgridcontent.php';
-
+    
     function getjsondocgridcontent(Action &$action)
     {
         $content = getdocgridcontent($action);
         $action->lay->template = json_encode($content);
         $action->lay->noparse = true;
-
+        
         header('Content-type: application/json');
     }
-
+    
     ?>
 
 Il intègre le backend par défaut en faisant un require du fichier PHP et ensuite appelle la méthode getdocgridcontent en renvoyant son retour en json.
@@ -34,16 +34,16 @@ Pour pouvoir utiliser un nouveau backend, il faut le déclarer lors de l'initial
     <html>
         <head>
             <title>DocGrid</title>
-
+            
             <link href="lib/jquery-ui/css/smoothness/jquery-ui-1.8.21.custom.css" rel="stylesheet" type="text/css" />
             <link href="lib/jquery-dataTables/css/jquery.dataTables_themeroller.css" rel="stylesheet" type="text/css" />
             <link href="DOCUMENT_GRID_UI/Layout/jquery.docGrid.css" rel="stylesheet" type="text/css" />
-
+            
             <script type="text/javascript" src="lib/jquery/jquery.js"></script>
             <script type="text/javascript" src="lib/jquery-ui/js/jquery-ui-1.8.21.custom.min.js"></script>
             <script type="text/javascript" src="lib/jquery-dataTables/js/jquery.dataTables.min.js"></script>
             <script type="text/javascript" src="DOCUMENT_GRID_UI/Layout/jquery.docGrid.js"></script>
-
+            
             <script type="text/javascript">
                 $(document).on("ready", function () {
                     $("#mydocGrid").docGrid({
@@ -61,10 +61,10 @@ Pour pouvoir utiliser un nouveau backend, il faut le déclarer lors de l'initial
                 });
             </script>
         </head>
-
+        
         <body>
             <table id="mydocGrid"></table>
         </body>
-
+        
     </html>
 

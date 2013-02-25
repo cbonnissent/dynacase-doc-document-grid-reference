@@ -1,4 +1,4 @@
-# Critères {#criteres}
+# Critères {#document-grid-ref:57ef9e48-731e-46ff-aa8e-ce5c015a3b42}
 
 La table peut aussi accepter en entrées un ensemble de critères, ceux-ci sont appliqués à la collection associées à la table (ou le searchDoc, le cas échéant) et seuls les éléments satisfaisant à ces critères sont présentés dans la table et apparaissent dans les décomptes.
 

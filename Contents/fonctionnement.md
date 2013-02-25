@@ -1,4 +1,4 @@
-# Fonctionnement
+# Fonctionnement {#document-grid-ref:ad9f0c7e-64a6-4f1e-9e6c-4297e78f0f41}
 
 La documentGrid fonctionne en lien avec le serveur Dynacase, le principe de fonctionnement est le suivant :
 
