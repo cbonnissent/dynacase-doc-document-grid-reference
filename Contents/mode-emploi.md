@@ -93,6 +93,9 @@ sortable
 
 dataTableOptions 
 :   objet de configuration de la dataTable associée à la documentGrid,  
+    **Note** : Les options passées par cette entrée ne sont supportées via le contrat de support,
+    il appartient au développeur de tester le comportement et de faire ci-besoin 
+    les ajustements nécessaires.  
     *type* : objet javascript  ;
 
 withOverlay
@@ -233,14 +236,12 @@ defaultFam
         Elle est calculée automatiquement si la grille n'est pas en mode offlineColumnsDef.  
         *type* : chaîne de caractères
 
-Lors de la définition d'une colonne doivent être présent a minima soit l'id, soit le type.
+Lors de la définition d'une colonne doivent être présent a minima soit l'id,
+soit le type.
 
-#### dataTableOptions {#document-grid-ref:bba069d3-a65a-4e82-80c5-d58955066087}
-
-Options bas niveau de la dataTable (voir la [page d'aide de dataTable][jquery-datatables-options]).
-
-Il est à noter que si des options de configuration de la dataTable sont ajoutées Anakeen ne garantit le plus le fonctionnement de celle-ci.
-
+**Note** : Vous pouvez utiliser [d'autres options][jquery-datatables-columns-options] 
+propres aux colonnes de la datatable mais dans ce cas le fonctionnement n'est pas
+garanti et il appartient au développeur de faire les ajustements nécessaires.
 
 ## Méthodes associées {#document-grid-ref:d1c034a3-eb0b-4cc4-89b1-7892642b1428}
 
@@ -248,6 +249,8 @@ Plusieurs méthodes sont associées à l'objet documentGrid :
 
 destroy
 :   Permet de détruire la table.  
+    La table ne peut pas être détruite avant son initialisation, toutefois dans 
+    ce cas l'ordre de destruction est enregistré et appliqué à la fin du chargement.
     La table est alors supprimée (la balise reste en place, mais son contenu est vidé),
 
 refresh
@@ -289,6 +292,7 @@ Les évènements peuvent être écoutés de deux manières différentes :
     [javascript]
     $("#mydocGrid").docGrid({ error : function(e, ui) { console.log(ui);}};
 
-[criteres]: #document-grid-ref:57ef9e48-731e-46ff-aa8e-ce5c015a3b42
-[columnsDef]: #document-grid-ref:e1408dca-0c10-4c33-bb1c-8aeab1f69ef1
-[jquery-datatables-options]: http://www.datatables.net/usage/options
+[criteres]:                             #document-grid-ref:57ef9e48-731e-46ff-aa8e-ce5c015a3b42
+[columnsDef]:                           #document-grid-ref:e1408dca-0c10-4c33-bb1c-8aeab1f69ef1
+[jquery-datatables-options]:            http://www.datatables.net/usage/options
+[jquery-datatables-columns-options]:    http://datatables.net/usage/columns
