@@ -11,20 +11,27 @@ L'intégration du plugin requiert l'ajout dans la page web des composants suivan
 * **jquery dataTables** : `lib/jquery-dataTables/js/jquery.dataTables.min.js` & `lib/jquery-dataTables/css/jquery.dataTables_themeroller.css`
 * **jquery docGrid** : `DOCUMENT_GRID_UI/Layout/jquery.docGrid-code.js` & `DOCUMENT_GRID_UI/Layout/jquery.docGrid.css`
 
-Les adresses des éléments sont données à titre indicatif et sont valables dans l'optique d'une intégration au sein d'une application/action.
+Les adresses des éléments sont données à titre indicatif et sont valables dans
+l'optique d'une intégration au sein d'une application/action.
 
 ## Droits {#document-grid-ref:ab08967e-c25e-4fd7-8997-3e6a2f71a20d}
 
-Les utilisateurs devant avoir accès à DocumentGrid et ses actions associées doivent avoir l'ACL : *BASIC* de l'application *DOCUMENT_GRID_UI*.
+Les utilisateurs devant avoir accès à DocumentGrid et ses actions associées
+doivent avoir l'ACL : *BASIC* de l'application *DOCUMENT_GRID_UI*.
 
 ## Initialisation {#document-grid-ref:be129832-025e-4939-9bb2-09c5b4271077}
 
-Idéalement l'initialisation du plugin doit avoir lieu sur l'évènement *ready* de la page en cours pour permettre à la DOM et aux dépendances d'être chargées au préalable.
+Idéalement l'initialisation du plugin doit avoir lieu sur l'évènement *ready* de
+la page en cours pour permettre à la DOM et aux dépendances d'être chargées au
+préalable.
 
-L'initialisation de la documentGrid se fait sur une balise `<table>`, celle-ci doit être pré-existante à l'initialisation. On doit ensuite la sélectionner à l'aide de jQuery et l'initialiser.
+L'initialisation de la documentGrid se fait sur une balise `<table>`, celle-ci
+doit être pré-existante à l'initialisation. On doit ensuite la sélectionner à
+l'aide de jQuery et l'initialiser.
 
 
-Exemple d'initialisation de documentGrid contenant le titre et un bouton permettant d'ouvrir le document :
+Exemple d'initialisation de documentGrid contenant le titre et un bouton
+permettant d'ouvrir le document :
 
     [html]
     <html>
@@ -95,7 +102,7 @@ withOverlay
 
 offlineColumnsDef 
 :   active ou désactive la recherche de la définition des colonnes sur le serveur.
-    Passer ca paramètre à false évite une requête au serveur lors de l'initialisation du widget, mais vous devez alors fournir la définition complète.  
+    Passer ce paramètre à false évite une requête au serveur lors de l'initialisation du widget, mais vous devez alors fournir la définition complète.  
     *type* :booléen,  
     *valeur par défaut* : `false` ;
 
@@ -139,8 +146,9 @@ Pour mettre à jour une option après l'initialisation, on utilise la syntaxe su
 
 #### columnsDef {#document-grid-ref:e1408dca-0c10-4c33-bb1c-8aeab1f69ef1}
 
-Cet objet de configuration donne les éléments permettant d'établir la configuration des colonnes de la dataTable.
-Pour ce faire, il possède les propriétés `defaultFam` et `columns`.
+Cet objet de configuration donne les éléments permettant d'établir la
+configuration des colonnes de la dataTable. Pour ce faire, il possède les
+propriétés `defaultFam` et `columns`.
 
 defaultFam
 :   nom logique de la famille par défaut des attributs des colonnes  
@@ -254,7 +262,7 @@ Ces méthodes sont appelées avec la syntaxe suivante :
     [javascript]
     $("#mydocGrid").docGrid("<fonction_name>");
 
-## Événement associés : {#document-grid-ref:3d241ffa-9893-4f07-a0c8-7fe44659013c}
+## Événement associés {#document-grid-ref:3d241ffa-9893-4f07-a0c8-7fe44659013c}
 
 error
 :   déclenché à chaque erreur détectée par la dataTable.  
