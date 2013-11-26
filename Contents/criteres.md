@@ -1,8 +1,12 @@
 # Critères {#document-grid-ref:57ef9e48-731e-46ff-aa8e-ce5c015a3b42}
 
-La table peut aussi accepter en entrées un ensemble de critères, ceux-ci sont appliqués à la collection associées à la table (ou le searchDoc, le cas échéant) et seuls les éléments satisfaisant à ces critères sont présentés dans la table et apparaissent dans les décomptes.
+La table peut aussi accepter en entrées un ensemble de critères, ceux-ci sont
+appliqués à la collection associées à la table (ou le searchDoc, le cas échéant)
+et seuls les éléments satisfaisant à ces critères sont présentés dans la table
+et apparaissent dans les décomptes.
 
-Les critères se présentent sous la forme d'un array javascript dont chaque ligne est un objet avec le formalisme suivant :
+Les critères se présentent sous la forme d'un array JavaScript dont chaque ligne
+est un objet avec le formalisme suivant :
 
 id
 :   attribut ou propriété sur lequel la collection est filtrée.  
@@ -138,5 +142,6 @@ operator
         *   simple : non applicable,
         *   multiple : `not(ARRAY[%2$s] && (regexp_split_to_array(replace(%1$s, '<BR\>', E'\\n'), E'\\n' ))) or %1$s is NULL`
 
-*note* : dans la documentation `%1$s` correspond à l'id en cours et `%2$s`, `%3$s` aux valeurs en cours.
+**Note **: dans la documentation `%1$s` correspond à l'id en cours et `%2$s`,
+`%3$s` aux valeurs en cours.
 
