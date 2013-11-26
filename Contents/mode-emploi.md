@@ -258,7 +258,22 @@ refresh
     Celle-ci conserve son état courant (page en cours, tri, filtre), mais recharge ses données en effectuant une requête serveur.
 
 getFilters
-:   Permet de récupérer les filtres actuellement en cours sur la grille.
+:   Permet de récupérer les filtres actuellement en cours sur la grille, sous la
+    forme d'un tableau d'objets JavaScript.
+
+setFilters
+:   Permet de définir les filtres actuellement en cours sur la grille. Cette 
+    fonction prend comme argument un array contenant des objets de la forme 
+    suivantes :
+    
+    * **id** : identifiant du filtre (attrid de l'attribut correspondant
+     à la colonne),
+    * **value** : valeur,
+    * **text** : texte à afficher valable pour les filtres d'attributs `enum`
+     et `state`.
+
+resetFilters
+:   Remet les filtres à leur valeur initiale. C'est à dire sans valeur.
 
 Ces méthodes sont appelées avec la syntaxe suivante :
 
